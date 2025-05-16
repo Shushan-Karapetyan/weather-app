@@ -7,7 +7,7 @@
 - Displays a 5-day weather forecast using data grouped by day.
 - Shows hourly forecast for the current day.
 
-# Used echnologies 
+# Used technologies 
 
 - React
 - TypeScript
