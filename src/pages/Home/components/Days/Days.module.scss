@@ -1,0 +1,95 @@
+@import "../../../../styles/variables.scss";
+
+.days {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 100%;
+  background-color: var(#{--components-background-default});
+  box-shadow: $box-shadow;
+  border-radius: 0 0 $border-radius $border-radius;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(#{--body-background-light});
+  box-shadow: var(#{--card-shadow-default});
+  border-radius: 10px;
+  padding: 10px;
+  width: 149px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  .dayName {
+    margin-bottom: 7px;
+    font-size: 18px;
+    color: var(#{--dark-color});
+  }
+  .day_info {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: $base-color;
+  }
+
+  .img {
+    margin-bottom: 12px;
+  }
+
+  .temp_day {
+    font-size: 18px;
+    color: var(#{--text-color-default});
+  }
+
+  .temp_night {
+    font-size: 13px;
+    color: $base-color;
+    margin-bottom: 6px;
+  }
+
+  .info {
+    font-size: 13px;
+    color: $base-color;
+  }
+
+  &:hover {
+    box-shadow: var(#{--card-shadow-default});
+  }
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.tabs_wrapper {
+  display: flex;
+}
+.cancel,
+.tab {
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  border-radius: 5px;
+  padding: 9px 20px;
+  background-color: var(#{--components-background-default});
+  color: var(#{--text-color-default});
+  margin-right: 15px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.tabs {
+  &.active {
+    background: $primary-color;
+    color: #fff;
+  }
+}
+.cancel {
+  margin-right: 0;
+}
