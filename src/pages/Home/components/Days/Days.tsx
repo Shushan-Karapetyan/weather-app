@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { DailyForecast } from "../../../../types/type";
 import Card from "./Card";
 import s from "./Days.module.scss";

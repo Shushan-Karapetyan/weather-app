@@ -1,6 +1,6 @@
 import s from "./ThisDay.module.scss";
 import GlobalSVGSelector from "../../../../asstets/icons/global/GlobalSVGSelector";
-import { CurrentWeatherResponse, DailyForecast } from "../../../../types/type";
+import { DailyForecast } from "../../../../types/type";
 
 type Props = {
   data: DailyForecast | null;
@@ -9,7 +9,6 @@ type Props = {
 
 const ThisDay = ({ data, city }: Props) => {
     if (!data) return null;
-    console.log(data);
     
   return (
     <div className={s.this_day}>
