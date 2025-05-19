@@ -76,8 +76,8 @@ const GlobalSVGSelector = ({ id }: Props) => {
           </defs>
         </svg>
       );
-    case "Sun":
-    case "Clear":
+    case "01d":
+    case "01n":
       return (
         <svg
           width="48"
@@ -109,7 +109,8 @@ const GlobalSVGSelector = ({ id }: Props) => {
           </defs>
         </svg>
       );
-    case "freezing rain and sunny":
+    case "09d":
+    case "09n":
       return (
         <svg
           width="48"
@@ -175,7 +176,8 @@ const GlobalSVGSelector = ({ id }: Props) => {
           </defs>
         </svg>
       );
-    case "freezing rain":
+    case "09d":
+    case "09n":
       return (
         <svg
           width="48"
@@ -222,7 +224,12 @@ const GlobalSVGSelector = ({ id }: Props) => {
           </defs>
         </svg>
       );
-    case "Clouds":
+    case "02d":
+    case "02n":
+    case "03d":
+    case "03n":
+    case "04d":
+    case "04n":
       return (
         <svg
           width="48"
@@ -270,7 +277,8 @@ const GlobalSVGSelector = ({ id }: Props) => {
           </defs>
         </svg>
       );
-    case "Rain":
+    case "10d":
+    case "10n":
       return (
         <svg
           width="48"

@@ -82,6 +82,7 @@ export interface DailyForecast {
   temp_day: string;
   temp_night: string;
   info: string;
+  dateISO: string;
 }
 export interface Geolocation {
   name: string;

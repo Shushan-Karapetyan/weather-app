@@ -1,33 +1,27 @@
 import s from "./ThisDay.module.scss";
 import GlobalSVGSelector from "../../../../asstets/icons/global/GlobalSVGSelector";
+import { CurrentWeatherResponse, DailyForecast } from "../../../../types/type";
 
 type Props = {
-  data: {
-    name: string;
-    main: {
-      temp: number;
-    };
-    weather: Array<{
-      main: string;
-      description: string;
-    }>;
-  };
+  data: DailyForecast | null;
+  city: string;
 };
 
-const ThisDay = ({ data }: Props) => {
-  console.log(data.weather[0].main)
+const ThisDay = ({ data, city }: Props) => {
+    if (!data) return null;
+    console.log(data);
+    
   return (
     <div className={s.this_day}>
       <div className={s.top_block}>
         <div className={s.top_block_wrapper}>
-          <div className={s.current_city}>{data.name}</div>
+          <div className={s.current_city}>{city}</div>
           <div className={s.current_temp}>
-            {Math.floor(data.main.temp)}°C
+            {data.temp_day}
           </div>
           <div className={s.bottom_block}>
-            <GlobalSVGSelector id={data.weather[0].main} />
-            
-            {data.weather[0].description}
+            <GlobalSVGSelector id={data.icon_id} />
+            {data.info}
           </div>
         </div>
       </div>

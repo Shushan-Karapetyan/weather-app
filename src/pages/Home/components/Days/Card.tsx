@@ -1,16 +1,19 @@
 import s from "./Days.module.scss";
 import GlobalSVGSelector from "../../../../asstets/icons/global/GlobalSVGSelector";
 import { DailyForecast } from "../../../../types/type";
+import clsx from "clsx";
 
 interface Props {
   day: DailyForecast;
+  onClick: () => void;
+  isSelected: boolean;
 }
 
-const Card = ({ day }: Props) => {
+const Card = ({ day, onClick, isSelected }: Props) => {
   const { weekDay, date, icon_id, temp_day, temp_night, info } = day;
 
   return (
-    <div className={s.card}>
+    <div className={clsx(s.card, isSelected && s.selected)} onClick={onClick}>
       <div className={s.dayName}>{weekDay}</div>
       <div className={s.day_info}>{date}</div>
       <div className={s.img}>
