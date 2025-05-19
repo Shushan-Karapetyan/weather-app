@@ -14,4 +14,5 @@
 - Redux Toolkit & RTK Query
 - SCSS Modules
 - OpenWeatherMap API
+- yarn create vite
 

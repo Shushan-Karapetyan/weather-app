@@ -60,3 +60,11 @@
   align-items: center;
   justify-content: space-around;
 }
+
+
+@media (max-width: 600px) {
+  .this_day_info {
+    max-width: 200px;
+    padding: 20px;  
+  }
+}

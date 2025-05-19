@@ -15,6 +15,7 @@ type Props = {
 };
 
 const ThisDay = ({ data }: Props) => {
+  console.log(data.weather[0].main)
   return (
     <div className={s.this_day}>
       <div className={s.top_block}>
@@ -24,7 +25,8 @@ const ThisDay = ({ data }: Props) => {
             {Math.floor(data.main.temp)}°C
           </div>
           <div className={s.bottom_block}>
-            <GlobalSVGSelector id={data.weather[0].main.toLowerCase()} />
+            <GlobalSVGSelector id={data.weather[0].main} />
+            
             {data.weather[0].description}
           </div>
         </div>

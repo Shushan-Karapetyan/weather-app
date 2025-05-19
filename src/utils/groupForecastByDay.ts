@@ -1,5 +1,5 @@
 import { format } from "date-fns";
-import { ru } from "date-fns/locale";
+import { enUS } from "date-fns/locale";
 import { DailyForecast } from "../types/type";
 
 export function groupForecastByDay(list: any[]): DailyForecast[] {
@@ -22,7 +22,7 @@ export function groupForecastByDay(list: any[]): DailyForecast[] {
 
       return {
         date: format(new Date(date), "dd.MM"),
-        weekDay: format(new Date(date), "EEEE", { locale: ru }),
+        weekDay: format(new Date(date), "EEEE", { locale: enUS }),
         temp_day: Math.round(max) + "°",
         temp_night: Math.round(min) + "°",
         icon_id: items[0].weather[0].icon, 

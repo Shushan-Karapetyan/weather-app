@@ -11,10 +11,17 @@
 
 .top_block {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   padding: 30px 0;
+  max-height: 400px;
+  height: 100%;
+
+  .top_block_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
 
   svg {
     width: 119px;
@@ -37,7 +44,7 @@
   .current_city {
     color: $base-color;
     font-size: 30px;
-}
+  }
 }
 
 .bottom_block {

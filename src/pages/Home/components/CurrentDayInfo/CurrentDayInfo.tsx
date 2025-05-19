@@ -1,6 +1,6 @@
 import s from "./CurrentDayInfo.module.scss";
 import { format } from "date-fns";
-import { ru } from "date-fns/locale";
+import { enUS } from "date-fns/locale";
 
 interface ForecastItem {
   dt: number;
@@ -26,7 +26,7 @@ const CurrentDayInfo = ({ list }: ThisDayInfoProps) => {
       <div className={s.this_day_info_items}>
         {next24Hours.map((item) => {
           const timeString = format(new Date(item.dt * 1000), "HH:mm", {
-            locale: ru,
+            locale: enUS,
           });
 
           return (
